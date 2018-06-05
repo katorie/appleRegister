@@ -35,5 +35,13 @@ class ViewController: UIViewController {
         let tax: String? = String(Int(amount!)! * 8 / 108)
         taxLabel.text = tax
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! CheckoutViewController
+        
+        if let price = Int(priceLabel.text!) {
+            viewController.price = price
+        }
+    }
 }
 

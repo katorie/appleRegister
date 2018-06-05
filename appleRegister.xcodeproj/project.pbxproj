@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		417172FA20C661A100055C9E /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417172F920C661A100055C9E /* CheckoutViewController.swift */; };
 		EAA049C820BB97F9007FDF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA049C720BB97F9007FDF52 /* AppDelegate.swift */; };
 		EAA049CA20BB97F9007FDF52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA049C920BB97F9007FDF52 /* ViewController.swift */; };
 		EAA049CD20BB97F9007FDF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA049CB20BB97F9007FDF52 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		417172F920C661A100055C9E /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		EAA049C420BB97F9007FDF52 /* appleRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appleRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA049C720BB97F9007FDF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA049C920BB97F9007FDF52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				EAA049C720BB97F9007FDF52 /* AppDelegate.swift */,
 				EAA049C920BB97F9007FDF52 /* ViewController.swift */,
+				417172F920C661A100055C9E /* CheckoutViewController.swift */,
 				EAA049CB20BB97F9007FDF52 /* Main.storyboard */,
 				EAA049CE20BB97FC007FDF52 /* Assets.xcassets */,
 				EAA049D020BB97FC007FDF52 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA049CA20BB97F9007FDF52 /* ViewController.swift in Sources */,
+				417172FA20C661A100055C9E /* CheckoutViewController.swift in Sources */,
 				EAA049C820BB97F9007FDF52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
