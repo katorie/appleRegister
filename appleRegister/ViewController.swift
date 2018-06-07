@@ -43,5 +43,10 @@ class ViewController: UIViewController {
             viewController.price = price
         }
     }
+    
+    @IBAction func restart(_ segue: UIStoryboardSegue) {
+//        numberField.text = "1"
+        self.viewDidLoad()
+    }
 }
 
