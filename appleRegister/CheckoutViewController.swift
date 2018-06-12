@@ -11,6 +11,8 @@ import UIKit
 class CheckoutViewController: UIViewController {
     
     var price: Int = 0
+    var init_deposit: Int = 0
+    var init_change: Int = 0
 
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var depositText: UITextField!
@@ -20,8 +22,8 @@ class CheckoutViewController: UIViewController {
         super.viewDidLoad()
 
         amountLabel.text = String(price)
-        depositText.text = "0"
-        changeLabel.text = "0"
+        depositText.text = String(init_deposit)
+        changeLabel.text = String(init_deposit)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,8 +33,10 @@ class CheckoutViewController: UIViewController {
     
 
     @IBAction func checkoutButtonTapped(_ sender: Any) {
-        let change: String = String(Int(depositText.text!)! - price)
-        changeLabel.text = change
+        if let deposit = depositText.text, let int_deposit = Int(deposit) {
+            let change: String = String(int_deposit - price)
+            changeLabel.text = change
+        }
     }
     
     /*

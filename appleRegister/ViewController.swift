@@ -13,13 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var taxLabel: UILabel!
+
+    var init_number: Int = 1
+    var init_price: Int = 100
+    var init_tax: Int = 7
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        numberField.text = "1"
-        priceLabel.text = "100"
-        taxLabel.text = "7"
+        numberField.text = String(init_number)
+        priceLabel.text = String(init_price)
+        taxLabel.text = String(init_tax)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,11 +33,14 @@ class ViewController: UIViewController {
 
     
     @IBAction func okButtonTapped(_ sender: Any) {
-        let amount: String? = String(Int(numberField.text!)! * 100)
-        priceLabel.text = amount
-        
-        let tax: String? = String(Int(amount!)! * 8 / 108)
-        taxLabel.text = tax
+        if let number = numberField.text, let int_number = Int(number) {
+            let amount: String? = String(int_number * 100)
+            if let amount = amount, let int_amount = Int(amount) {
+                let tax: String? = String(int_amount * 8 / 108)
+                priceLabel.text = amount
+                taxLabel.text = tax
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,7 +52,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restart(_ segue: UIStoryboardSegue) {
-//        numberField.text = "1"
         self.viewDidLoad()
     }
 }
